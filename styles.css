@@ -3,7 +3,7 @@
   --secondary: #041225;
   --mid: #212c3d;
   --offwhite: #eeeeee;
-  --light: #c1c0b9;
+  --light: hsl(0, 0%, 87%);
 }
 * {
   margin: 0;
@@ -570,7 +570,7 @@ li {
 }
 .portfolio-project:hover .text-overlay {
   display: flex;
-  transition: ease-in 0.7s;
+  transition: all 0.5s;
 }
 .portfolio-project img {
   object-fit: fill;
@@ -694,7 +694,7 @@ li {
 #contact form fieldset input::placeholder,
 #contact form fieldset textarea::placeholder {
   font: inherit;
-  color: #a9a9a9;
+  color: #c3cbd4e8;
 }
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
@@ -767,7 +767,7 @@ footer a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #a9a9a9;
+  color: #d3d5db;
   font-size: 14px;
 }
 
@@ -1060,6 +1060,7 @@ footer a:hover {
   .contact-form h2 {
     display: none;
   }
+
   .contact-text h1 {
     font-size: 24px;
   }
