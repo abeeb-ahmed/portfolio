@@ -92,6 +92,7 @@ window.addEventListener("load", () => {
             scrollTrigger: {
               trigger: section,
               start: "top bottom-=50px",
+              ease: "power2",
             },
           }
         );
@@ -120,6 +121,7 @@ window.addEventListener("load", () => {
             scrollTrigger: {
               trigger: section,
               start: "top center",
+              ease: "power2",
             },
           }
         );
