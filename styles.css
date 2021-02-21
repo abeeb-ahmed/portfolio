@@ -156,8 +156,8 @@ ul {
   display: flex;
 }
 .line-break {
-  width: 50vw;
-  height: 3px;
+  width: 70vw;
+  height: 2px;
   background-color: var(--mid);
   display: flex;
   justify-content: center;
@@ -444,6 +444,9 @@ li {
 .service:hover i {
   color: var(--offwhite);
 }
+.service:hover p {
+  color: var(--offwhite);
+}
 .service i {
   color: var(--primary);
   margin-bottom: 20px;
@@ -455,9 +458,6 @@ li {
   margin-bottom: 20px;
 }
 /* Skills */
-#skills {
-  background-color: var(--mid);
-}
 #skills .container {
   padding: 5rem 2rem;
 }
@@ -535,9 +535,7 @@ li {
   width: 65%;
 }
 /* Portfolio */
-#portfolio {
-  background-color: var(--mid);
-}
+
 #portfolio h1 {
   text-align: center;
   color: var(--primary);
@@ -934,6 +932,9 @@ footer a:hover {
     justify-content: center;
     align-items: flex-start;
     padding: 0;
+  }
+  .line-break {
+    height: 1px;
   }
   #word-mark {
     display: none;
