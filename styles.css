@@ -1,7 +1,7 @@
 :root {
   --primary: #00adb5;
   --secondary: #041225;
-  --mid: #393e46;
+  --mid: #212c3d;
   --offwhite: #eeeeee;
   --light: #c1c0b9;
 }
@@ -761,7 +761,7 @@ footer a:hover {
 }
 .footer {
   padding: 5px;
-  background-color: #393b44;
+  background-color: var(--mid);
 }
 .copyright {
   display: flex;
