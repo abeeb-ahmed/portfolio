@@ -73,12 +73,12 @@ window.addEventListener("load", () => {
       tl.fromTo(
         ".home-left, .socials",
         { x: -400, opacity: 0 },
-        { x: 0, opacity: 1, duration: 0.3 },
+        { x: 0, opacity: 1, duration: 0.5 },
         "-=0.2"
       ).fromTo(
         ".home-img",
         { x: 400, opacity: 0 },
-        { x: 0, opacity: 1, duration: 0.3 },
+        { x: 0, opacity: 1, duration: 0.5 },
         "-=0.2"
       );
       sections.forEach((section) => {
@@ -88,11 +88,11 @@ window.addEventListener("load", () => {
           {
             opacity: 1,
             y: 0,
-            duration: 0.6,
+            duration: 0.5,
+            ease: "power2",
             scrollTrigger: {
               trigger: section,
               start: "top bottom-=50px",
-              ease: "power2",
             },
           }
         );
@@ -102,12 +102,12 @@ window.addEventListener("load", () => {
       tl.fromTo(
         ".home-left, .socials",
         { x: -400, opacity: 0 },
-        { x: 0, opacity: 1, duration: 0.3 },
+        { x: 0, opacity: 1, duration: 0.5 },
         "-=0.2"
       ).fromTo(
         ".home-img",
         { x: 400, opacity: 0 },
-        { x: 0, opacity: 1, duration: 0.3 },
+        { x: 0, opacity: 1, duration: 0.5 },
         "-=0.2"
       );
       sections.forEach((section) => {
@@ -117,11 +117,11 @@ window.addEventListener("load", () => {
           {
             opacity: 1,
             y: 0,
-            duration: 0.6,
+            duration: 0.5,
+            ease: "power2",
             scrollTrigger: {
               trigger: section,
               start: "top center",
-              ease: "power2",
             },
           }
         );
