@@ -73,12 +73,12 @@ window.addEventListener("load", () => {
       tl.fromTo(
         ".home-left, .socials",
         { x: -400, opacity: 0 },
-        { x: 0, opacity: 1, duration: 0.5 },
+        { x: 0, opacity: 1, duration: 0.3 },
         "-=0.2"
       ).fromTo(
         ".home-img",
         { x: 400, opacity: 0 },
-        { x: 0, opacity: 1, duration: 0.5 },
+        { x: 0, opacity: 1, duration: 0.3 },
         "-=0.2"
       );
       sections.forEach((section) => {
@@ -101,12 +101,12 @@ window.addEventListener("load", () => {
       tl.fromTo(
         ".home-left, .socials",
         { x: -400, opacity: 0 },
-        { x: 0, opacity: 1, duration: 0.5 },
+        { x: 0, opacity: 1, duration: 0.3 },
         "-=0.2"
       ).fromTo(
         ".home-img",
         { x: 400, opacity: 0 },
-        { x: 0, opacity: 1, duration: 0.5 },
+        { x: 0, opacity: 1, duration: 0.3 },
         "-=0.2"
       );
       sections.forEach((section) => {
