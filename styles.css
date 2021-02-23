@@ -701,7 +701,7 @@ li {
   font-size: 1.1px;
   color: var(--offwhite);
   width: 100%;
-  border: 3px solid var(--primary);
+  border: 1px solid var(--primary);
   font: inherit;
 }
 #contact form fieldset input::placeholder,
