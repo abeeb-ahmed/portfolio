@@ -51,7 +51,6 @@ a {
 .btn {
   background-color: var(--primary);
   border: solid 2px var(--primary);
-  border-radius: 3px;
   padding: 5px 0;
   font-family: "Poppins", sans-serif;
   font-size: 1rem;
@@ -1069,6 +1068,9 @@ footer a:hover {
   }
   .contact-form h2 {
     display: none;
+  }
+  .contact-text {
+    text-align: center;
   }
 
   .contact-text h1 {
