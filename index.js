@@ -1,9 +1,8 @@
 const nav = document.querySelector("nav");
 const preloader = document.getElementById("preloader");
 const navHeight = nav.offsetTop;
-gsap.registerPlugin(ScrollTrigger);
-const tl = gsap.timeline({ defaults: { ease: "power2" } });
-const sections = gsap.utils.toArray(".fade-in");
+const tl = gsap.timeline({ defaults: { ease: "power1" } });
+const faders = document.querySelectorAll(".fade-in");
 const stickyNav = () => {
   window.pageYOffset > navHeight
     ? document.querySelector("nav").classList.add("navShadow")
@@ -68,64 +67,39 @@ window.addEventListener("load", () => {
   preloader.style.opacity = "0";
   preloader.style.display = "none";
   // Gsap animation
-  ScrollTrigger.matchMedia({
-    "(min-width: 760px)": function () {
-      tl.fromTo(
-        ".home-left, .socials",
-        { x: -400, opacity: 0 },
-        { x: 0, opacity: 1, duration: 0.5 },
-        "-=0.2"
-      ).fromTo(
-        ".home-img",
-        { x: 400, opacity: 0 },
-        { x: 0, opacity: 1, duration: 0.5 },
-        "-=0.2"
-      );
-      sections.forEach((section) => {
-        gsap.fromTo(
-          section,
-          { opacity: 0, y: 200 },
-          {
-            opacity: 1,
-            y: 0,
-            duration: 0.5,
-            ease: "power2",
-            scrollTrigger: {
-              trigger: section,
-              start: "top bottom-=50px",
-            },
-          }
-        );
-      });
-    },
-    "(max-width: 760px)": function () {
-      tl.fromTo(
-        ".home-left, .socials",
-        { x: -400, opacity: 0 },
-        { x: 0, opacity: 1, duration: 0.5 },
-        "-=0.2"
-      ).fromTo(
-        ".home-img",
-        { x: 400, opacity: 0 },
-        { x: 0, opacity: 1, duration: 0.5 },
-        "-=0.2"
-      );
-      sections.forEach((section) => {
-        gsap.fromTo(
-          section,
-          { opacity: 0, y: 200 },
-          {
-            opacity: 1,
-            y: 0,
-            duration: 0.5,
-            ease: "power2",
-            scrollTrigger: {
-              trigger: section,
-              start: "top center",
-            },
-          }
-        );
-      });
-    },
+  tl.fromTo(
+    ".home-left, .socials",
+    { x: -400, opacity: 0 },
+    { x: 0, opacity: 1, duration: 0.5 },
+    "-=0.2"
+  ).fromTo(
+    ".home-img",
+    { x: 400, opacity: 0 },
+    { x: 0, opacity: 1, duration: 0.5 },
+    "-=0.2"
+  );
+  // Intersection observer
+  const appearOptions = {
+    thresholds: 1,
+    rootMargin: "0px 0px -300px 0px",
+  };
+
+  const appearOnScroll = new IntersectionObserver(function (
+    entries,
+    appearOnScroll
+  ) {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) {
+        return;
+      } else {
+        entry.target.classList.add("appear");
+        appearOnScroll.unobserve(entry.target);
+      }
+    });
+  },
+  appearOptions);
+
+  faders.forEach((fader) => {
+    appearOnScroll.observe(fader);
   });
 });
