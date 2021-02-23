@@ -581,7 +581,8 @@ li {
 .portfolio-project:hover .text-overlay {
   display: flex;
   opacity: 0.95;
-  transition: all 0.3s;
+  transition: all 0.5s;
+  transform: translateY(0);
 }
 .portfolio-project img {
   object-fit: fill;
@@ -604,6 +605,7 @@ li {
   overflow: hidden;
   padding: 30px 20px;
   opacity: 0;
+  transform: translateY(500px);
   background-color: var(--primary);
   align-items: center;
 }
