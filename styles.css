@@ -700,7 +700,7 @@ li {
   border-radius: 3px;
   margin: 5px 0;
   font-size: 1.1px;
-  color: var(--offwhite);
+  color: var(--light);
   width: 100%;
   border: 1px solid var(--primary);
   font: inherit;
@@ -708,7 +708,7 @@ li {
 #contact form fieldset input::placeholder,
 #contact form fieldset textarea::placeholder {
   font: inherit;
-  color: #c3cbd4e8;
+  color: grey;
 }
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
