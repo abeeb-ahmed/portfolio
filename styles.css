@@ -695,6 +695,7 @@ li {
 #contact form fieldset textarea {
   padding: 15px;
   background-color: var(--mid);
+  outline-width: 0;
   border: none;
   border-radius: 3px;
   margin: 5px 0;
